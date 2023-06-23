@@ -1,9 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-import '../common/failure.dart';
-import '../common/logger.dart';
-import '../utils/types.dart';
+import '../common/common.dart';
+import '../utils/utils.dart';
 
 class DioClient {
   DioClient._();
@@ -48,7 +47,7 @@ class DioClient {
       }
       throw "Something went wrong !!!";
     } catch (err) {
-      l.e(err.toString());
+      Log.instance.e(err.toString());
       return Right(Failure(err: err.toString()));
     }
   }
@@ -78,7 +77,7 @@ class DioClient {
       }
       throw "Something went wrong !!!";
     } catch (err) {
-      l.e(err.toString());
+      Log.instance.e(err.toString());
       return Right(Failure(err: err.toString()));
     }
   }
@@ -108,7 +107,7 @@ class DioClient {
       }
       throw "Something went wrong !!!";
     } catch (err) {
-      l.e(err.toString());
+      Log.instance.e(err.toString());
       return Right(Failure(err: err.toString()));
     }
   }
@@ -134,7 +133,7 @@ class DioClient {
       }
       throw "Something went wrong !!!";
     } catch (err) {
-      l.e(err.toString());
+      Log.instance.e(err.toString());
       return Right(Failure(err: err.toString()));
     }
   }
