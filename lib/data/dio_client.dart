@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-import '../common/common.dart';
 import '../utils/utils.dart';
 
 class DioClient {

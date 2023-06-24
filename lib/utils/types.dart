@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 
-import '../common/failure.dart';
+import 'failure.dart';
 
 typedef FEither<T> = Future<Either<T, Failure>>;
 

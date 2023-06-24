@@ -34,13 +34,13 @@ abstract class AppData {
       ),
       bodyMedium: GoogleFonts.sourceCodePro(
         fontSize: 20.sp,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w500,
         color: Colors.black,
         letterSpacing: AppDataTextStyles.letterSpacing,
       ),
       bodySmall: GoogleFonts.sourceCodePro(
         fontSize: 18.sp,
-        fontWeight: FontWeight.w200,
+        fontWeight: FontWeight.w500,
         color: Colors.black,
         letterSpacing: AppDataTextStyles.letterSpacing,
       ),
@@ -52,13 +52,13 @@ abstract class AppData {
       ),
       labelMedium: GoogleFonts.sourceCodePro(
         fontSize: 16.sp,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w500,
         color: Colors.black,
         letterSpacing: AppDataTextStyles.letterSpacing,
       ),
       labelSmall: GoogleFonts.sourceCodePro(
         fontSize: 14.sp,
-        fontWeight: FontWeight.w200,
+        fontWeight: FontWeight.w500,
         color: Colors.black,
         letterSpacing: AppDataTextStyles.letterSpacing,
       ),

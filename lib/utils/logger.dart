@@ -5,7 +5,13 @@ class Log {
 
   static final instance = Log._();
 
-  final Logger _logger = Logger(printer: PrettyPrinter(printTime: true));
+  final Logger _logger = Logger(
+    printer: PrettyPrinter(
+      printTime: true,
+      printEmojis: true,
+      colors: true,
+    ),
+  );
 
   void e(String message, {int? statusCode}) =>
       _logger.e("Error Code : $statusCode \nError : $message");

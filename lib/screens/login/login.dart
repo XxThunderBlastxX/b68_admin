@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../app_data.dart';
 import '../../bloc/login/login_bloc.dart';
 import '../../common/common.dart';
+import '../../utils/utils.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   VoidCallback onSignInPressed(BuildContext context) => () {
-        Log.instance.d('Signing in...');
+        Log.instance.i('Signing in...');
         context.read<LoginBloc>().add(OnLoginEvent());
       };
 
@@ -41,7 +43,12 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: onSignInPressed(context),
-                    child: const Text('Sign In'),
+                    child: Text(
+                      'Sign In',
+                      style: AppData.themeData.textTheme.bodyMedium!.copyWith(
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ],
               ),
