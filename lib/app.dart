@@ -1,8 +1,8 @@
+import 'package:b68_admin/router/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'app_data.dart';
-import 'screens/login/login.dart';
 
 class B68App extends StatelessWidget {
   const B68App({super.key});
@@ -11,11 +11,13 @@ class B68App extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       minTextAdapt: true,
-      builder: (context, child) => MaterialApp(
+      builder: (context, child) => MaterialApp.router(
         title: 'B68 Admin',
         debugShowCheckedModeBanner: false,
         theme: AppData.themeData,
-        home: const LoginScreen(),
+        routerDelegate: AppRoutes.router.routerDelegate,
+        routeInformationParser: AppRoutes.router.routeInformationParser,
+        routeInformationProvider: AppRoutes.router.routeInformationProvider,
       ),
     );
   }
