@@ -12,8 +12,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<LoginAuthenticateEvent>((event, emit) async {
       await onLoginEventHandler(event, emit);
     });
-
-    on<LoginAuthorizeEvent>((event, emit) {});
   }
 }
 

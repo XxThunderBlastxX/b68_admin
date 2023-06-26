@@ -18,8 +18,3 @@ class LoginAuthorizeEvent extends LoginEvent {
   @override
   List<Object?> get props => [];
 }
-
-class LoginResponseEvent extends LoginEvent {
-  @override
-  List<Object?> get props => [];
-}

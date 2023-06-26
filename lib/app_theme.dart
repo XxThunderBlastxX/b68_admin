@@ -37,13 +37,13 @@ abstract class AppTheme {
         letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
       bodyMedium: GoogleFonts.sourceCodePro(
-        fontSize: 20.sp,
+        fontSize: 18.5.sp,
         fontWeight: FontWeight.w500,
         color: Colors.black,
         letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
       bodySmall: GoogleFonts.sourceCodePro(
-        fontSize: 18.sp,
+        fontSize: 16.sp,
         fontWeight: FontWeight.w500,
         color: Colors.black,
         letterSpacing: AppThemeTextStyles.letterSpacing,
