@@ -1,6 +1,9 @@
-import 'package:b68_admin/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../app_theme.dart';
+import 'widgets/dashboard_drawer.dart';
+import 'widgets/dashboard_tile.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -10,11 +13,14 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dashboard'),
-        leading: IconButton(
-          icon: const Icon(Icons.clear_all),
-          onPressed: () {},
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.clear_all),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
         ),
       ),
+      drawer: DashboardDrawer(context: context),
       body: Column(
         children: [
           Row(
@@ -59,27 +65,6 @@ class DashboardScreen extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class DashboardTile extends StatelessWidget {
-  final Widget child;
-
-  const DashboardTile({super.key, required this.child});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: (150.w),
-      height: 90.h,
-      padding: EdgeInsets.symmetric(vertical: 9.w, horizontal: 10.h),
-      margin: EdgeInsets.all(14.w),
-      decoration: BoxDecoration(
-        color: Colors.deepPurpleAccent.shade200,
-        borderRadius: BorderRadius.circular(8.r),
-      ),
-      child: child,
     );
   }
 }

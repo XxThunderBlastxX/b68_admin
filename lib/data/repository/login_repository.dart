@@ -1,7 +1,7 @@
-import 'package:b68_admin/model/auth/auth_model.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_web_auth/flutter_web_auth.dart';
 
+import '../../model/models.dart';
 import '../../utils/utils.dart';
 import '../dio_client.dart';
 import '../interface/login_interface.dart';
