@@ -1,8 +1,8 @@
-import 'package:b68_admin/router/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'app_data.dart';
+import 'app_theme.dart';
+import 'router/routes.dart';
 
 class B68App extends StatelessWidget {
   const B68App({super.key});
@@ -14,7 +14,7 @@ class B68App extends StatelessWidget {
       builder: (context, child) => MaterialApp.router(
         title: 'B68 Admin',
         debugShowCheckedModeBanner: false,
-        theme: AppData.themeData,
+        theme: AppTheme.themeData,
         routerDelegate: AppRoutes.router.routerDelegate,
         routeInformationParser: AppRoutes.router.routeInformationParser,
         routeInformationProvider: AppRoutes.router.routeInformationProvider,

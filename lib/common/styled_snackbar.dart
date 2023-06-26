@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../app_data.dart';
+import '../app_theme.dart';
 
 extension StyledSnackbar on BuildContext {
   void styledSnackbar(String message, {int? statusCode}) {
@@ -10,13 +10,13 @@ extension StyledSnackbar on BuildContext {
         content: statusCode == null
             ? Text(
                 'Error: $message',
-                style: AppData.themeData.textTheme.labelSmall!.copyWith(
+                style: AppTheme.themeData.textTheme.labelSmall!.copyWith(
                   color: Colors.white,
                 ),
               )
             : Text(
                 'Error: $statusCode \n$message',
-                style: AppData.themeData.textTheme.labelSmall!.copyWith(
+                style: AppTheme.themeData.textTheme.labelSmall!.copyWith(
                   color: Colors.white,
                 ),
               ),

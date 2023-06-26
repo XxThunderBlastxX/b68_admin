@@ -4,7 +4,22 @@ abstract class LoginEvent extends Equatable {
   const LoginEvent();
 }
 
-class OnLoginEvent extends LoginEvent {
+class LoginAuthenticateEvent extends LoginEvent {
+  final String url;
+  final String scheme;
+
+  const LoginAuthenticateEvent({required this.url, required this.scheme});
+
+  @override
+  List<Object?> get props => [url, scheme];
+}
+
+class LoginAuthorizeEvent extends LoginEvent {
+  @override
+  List<Object?> get props => [];
+}
+
+class LoginResponseEvent extends LoginEvent {
   @override
   List<Object?> get props => [];
 }

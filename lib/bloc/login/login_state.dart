@@ -9,12 +9,20 @@ class LoginInitial extends LoginState {
   List<Object> get props => [];
 }
 
-class LoginSuccess extends LoginInitial {}
+class LoginLoading extends LoginState {
+  @override
+  List<Object?> get props => [];
+}
 
-class LoginFailure extends LoginInitial {
+class LoginSuccess extends LoginState {
+  @override
+  List<Object?> get props => [];
+}
+
+class LoginFailure extends LoginState {
   final Failure failure;
 
-  LoginFailure(this.failure);
+  const LoginFailure({required this.failure});
 
   @override
   List<Object> get props => [failure];

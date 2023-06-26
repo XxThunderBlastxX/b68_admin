@@ -1,4 +1,4 @@
-package com.example.b68_admin
+package dev.b68.app
 
 import io.flutter.embedding.android.FlutterActivity
 

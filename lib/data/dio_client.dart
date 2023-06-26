@@ -20,7 +20,7 @@ class DioClient {
       connectTimeout: connectTimeout,
       receiveTimeout: receiveTimeout,
       contentType: contentType,
-      responseType: ResponseType.bytes,
+      responseType: ResponseType.json,
     ),
   );
 

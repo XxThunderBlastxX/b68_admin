@@ -2,19 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-abstract class AppDataColors {
+abstract class AppThemeColors {
   static Color primaryColor = Colors.deepPurple.shade400;
   static Color secondaryColor = Colors.deepPurple.shade300;
 }
 
-abstract class AppDataTextStyles {
+abstract class AppThemeTextStyles {
   static double letterSpacing = 0.4;
 }
 
-abstract class AppData {
+abstract class AppTheme {
   static ThemeData themeData = ThemeData(
-    primaryColor: AppDataColors.primaryColor,
+    primaryColor: AppThemeColors.primaryColor,
     brightness: Brightness.light,
+    dialogTheme: DialogTheme(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
+      elevation: 8.0,
+    ),
     snackBarTheme: SnackBarThemeData(
       backgroundColor: Colors.black,
       shape: RoundedRectangleBorder(
@@ -30,48 +34,48 @@ abstract class AppData {
         fontSize: 24.sp,
         fontWeight: FontWeight.w500,
         color: Colors.black,
-        letterSpacing: AppDataTextStyles.letterSpacing,
+        letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
       bodyMedium: GoogleFonts.sourceCodePro(
         fontSize: 20.sp,
         fontWeight: FontWeight.w500,
         color: Colors.black,
-        letterSpacing: AppDataTextStyles.letterSpacing,
+        letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
       bodySmall: GoogleFonts.sourceCodePro(
         fontSize: 18.sp,
         fontWeight: FontWeight.w500,
         color: Colors.black,
-        letterSpacing: AppDataTextStyles.letterSpacing,
+        letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
       labelLarge: GoogleFonts.sourceCodePro(
         fontSize: 18.sp,
         fontWeight: FontWeight.w500,
         color: Colors.black,
-        letterSpacing: AppDataTextStyles.letterSpacing,
+        letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
       labelMedium: GoogleFonts.sourceCodePro(
         fontSize: 16.sp,
         fontWeight: FontWeight.w500,
         color: Colors.black,
-        letterSpacing: AppDataTextStyles.letterSpacing,
+        letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
       labelSmall: GoogleFonts.sourceCodePro(
         fontSize: 14.sp,
         fontWeight: FontWeight.w500,
         color: Colors.black,
-        letterSpacing: AppDataTextStyles.letterSpacing,
+        letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(AppDataColors.primaryColor),
+        backgroundColor: MaterialStateProperty.all(AppThemeColors.primaryColor),
         textStyle: MaterialStateProperty.all(
           GoogleFonts.sourceCodePro(
             fontSize: 18.sp,
             fontWeight: FontWeight.w500,
             color: Colors.white,
-            letterSpacing: AppDataTextStyles.letterSpacing,
+            letterSpacing: AppThemeTextStyles.letterSpacing,
           ),
         ),
         shape: MaterialStateProperty.all(
@@ -88,7 +92,7 @@ abstract class AppData {
         fontSize: 20.sp,
         fontWeight: FontWeight.w500,
         color: Colors.white,
-        letterSpacing: AppDataTextStyles.letterSpacing,
+        letterSpacing: AppThemeTextStyles.letterSpacing,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
